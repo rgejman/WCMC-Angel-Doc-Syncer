@@ -1,0 +1,30 @@
+This script will synchronize all the WCMC Angel course files to your computer without replacing any you already have (so you can freely annotate) Of course, no warranty or guarantees. If it wipes out your computer, you're on your own :).
+
+In order to use it you must:
+
+1. Have a mac
+2. Be able to edit a text file
+3. Be able to open the terminal (Applications/Utilities/Terminal) and type a few commands
+
+Steps to install/use.
+
+1. Open the Mac App store and install "XCode" -- it's free and made by Apple.
+2. Download this script
+3. open the terminal and install the "Mechanize" library like so:
+
+`sudo gem install mechanize`
+
+type your password when requested.
+
+4. Edit lines 7-10 to include your CWID, password and the location where you want the files stored like so:
+
+USERNAME = "rog2021"
+PASSWORD = "thisisasupersecurepassword"
+COURSES = ["Human Structure and Function", "Medicine, Patients and Society I"]
+FILE_DIRS = ["~/Dropbox/M1/HSF","~/Dropbox/M1/MPS1"]
+
+5. to run the program, simply navigate to the folder where the script is stored  and type: 
+`ruby sync_with_angel.rb`
+
+6. ta da!
+
