@@ -20,9 +20,9 @@ REJECTED_LINKS = [/Discussion Forum/, /MIRC/, /^\s*Up\s*$/, /My Notes/,/^\s*Prev
 
 def is_downloadable_doc? (page)
   return false unless page.iframes.length > 0
-  return false if page.iframes.first.uri.to_s =~ /\.(mov|avi|mpeg|mpg|m4v)$/ #skip if it's a movie
   return false if page.iframes.first.uri.to_s =~ /Panopto/
-  return false if page.iframes.first.uri.to_s =~ /javascript:/
+  return false if page.iframes.first.uri.to_s =~ /javascript:/  
+  return false if page.iframes.first.content.links.first.to_s =~ /@/
   return true
 end
 
