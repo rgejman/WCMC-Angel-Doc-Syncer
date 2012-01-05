@@ -12,19 +12,20 @@ Steps to install/use.
 2. Download this script
 3. open the terminal and install the "Mechanize" library like so:
 
-`sudo gem install mechanize`
+     sudo gem install mechanize
 
 type your password when requested.
 
 4. Edit lines 7-10 to include your CWID, password and the location where you want the files stored like so:
 
-USERNAME = "rog2021"
-PASSWORD = "thisisasupersecurepassword"
-COURSES = ["Human Structure and Function", "Medicine, Patients and Society I"]
-FILE_DIRS = ["~/Dropbox/M1/HSF","~/Dropbox/M1/MPS1"]
+     USERNAME = "rog2021"
+     PASSWORD = "thisisasupersecurepassword"
+     COURSES = ["Human Structure and Function", "Medicine, Patients and Society I"]
+     FILE_DIRS = ["~/Dropbox/M1/HSF","~/Dropbox/M1/MPS1"]
 
 5. to run the program, simply navigate to the folder where the script is stored  and type: 
-`ruby sync_with_angel.rb`
+
+     ruby sync_with_angel.rb
 
 6. ta da!
 
