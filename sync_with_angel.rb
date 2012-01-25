@@ -16,12 +16,13 @@ require 'rubygems'
 require 'mechanize'
 require 'FileUtils'
 
-REJECTED_LINKS = [/Discussion Forum/, /MIRC/, /^\s*Up\s*$/, /My Notes/,/^\s*Previous\s*$/, /^\s*Next\s*$/, /Copyright Disclaimer/, /Video/, /\|/, /Calendar/, /Courseware/, /Evaluation/]
+REJECTED_LINKS = [/PBL Collaboration Space/, /Discussion Forum/, /MIRC/, /^\s*Up\s*$/, /My Notes/,/^\s*Previous\s*$/, /^\s*Next\s*$/, /Copyright Disclaimer/, /Video/, /\|/, /Calendar/, /Courseware/, /Evaluation/]
 
 def is_downloadable_doc? (page)
   return false unless page.iframes.length > 0
   return false if page.iframes.first.uri.to_s =~ /Panopto/
   return false if page.iframes.first.uri.to_s =~ /javascript:/  
+  return false unless page.iframes.first.content.respond_to? :links
   return false if page.iframes.first.content.links.first.to_s =~ /@/
   return true
 end
