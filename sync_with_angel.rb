@@ -6,8 +6,8 @@
 
 USERNAME = ""
 PASSWORD = ""
-COURSES = ["Human Structure and Function", "Medicine, Patients and Society I"]
-FILE_DIRS = ["/Users/rgejman/Dropbox/M1/HSF","/Users/rgejman/Dropbox/M1/MPS1"]
+COURSES = ["Human Structure and Function", "Medicine, Patients and Society I", "Host Defenses"]
+FILE_DIRS = ["/Users/rgejman/Dropbox/M1/HSF","/Users/rgejman/Dropbox/M1/MPS1", "/Users/rgejman/Dropbox/M1/HD"]
 
 ######
 ######
@@ -16,7 +16,7 @@ require 'rubygems'
 require 'mechanize'
 require 'FileUtils'
 
-REJECTED_LINKS = [/PBL Collaboration Space/, /Discussion Forum/, /MIRC/, /^\s*Up\s*$/, /My Notes/,/^\s*Previous\s*$/, /^\s*Next\s*$/, /Copyright Disclaimer/, /Video/, /\|/, /Calendar/, /Courseware/, /Evaluation/]
+REJECTED_LINKS = [/Index/, /PBL Collaboration Space/, /Discussion Forum/, /MIRC/, /^\s*Up\s*$/, /My Notes/,/^\s*Previous\s*$/, /^\s*Next\s*$/, /Copyright Disclaimer/, /Video/, /\|/, /Calendar/, /Courseware/, /Evaluation/]
 
 def is_downloadable_doc? (page)
   return false unless page.iframes.length > 0
