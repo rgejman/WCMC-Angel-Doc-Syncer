@@ -43,6 +43,7 @@ def download_files(file_dir, agent, path, page)
   elsif is_downloadable_doc? page
     begin
       # we have a document—let's download it.
+      return if page.iframes.first.content.links.empty?
       doc_link = page.iframes.first.content.links.first
       filename = doc_link.text.gsub(":", " -").gsub("/","-").strip
       enclosing_folder = "#{file_dir}/" + path.join("/")
