@@ -52,6 +52,7 @@ def download_files(file_dir, agent, path, page)
       unless File.exists? local_filepath
         puts "Downloading #{path.join('/')}/#{filename} to #{local_filepath}"
         uri = doc_link.uri
+        return if uri.to_s =~ /javascript/ ## If we have a js link
         document = agent.get(uri).content
         FileUtils.mkdir_p enclosing_folder
         File.open(local_filepath, "w") do |f|
