@@ -49,6 +49,7 @@ def download_files(file_dir, agent, path, page)
       enclosing_folder = "#{file_dir}/" + path.join("/")
       local_filepath = "#{enclosing_folder}/#{filename}"
       ## does this document already exist on the user's computer?
+      return if filename == ""
       unless File.exists? local_filepath
         puts "Downloading #{path.join('/')}/#{filename} to #{local_filepath}"
         uri = doc_link.uri
