@@ -9,23 +9,26 @@ In order to use it you must:
 Steps to install/use.
 
 1. Open the Mac App store and install "XCode" -- it's free and made by Apple.
-2. Download this script
-3. open the terminal and install the "Mechanize" library like so:
+2. Launch Xcode (found in your Applications folder).
+3. Open the Xcode Preferences and click on the "Downloads" tab.
+4. Download/Install the "Command Line Tools"
+5. Go back to the GitHub WCMC-Angel-Doc-Syncer page and download the Zip file
+6. Open the terminal and install the "Mechanize" library like so:
 
      sudo gem install mechanize
 
 type your password when requested.
 
-4. Edit lines 7-10 to include your CWID, password and the location where you want the files stored like so:
+7. Edit lines 7-10 to include your CWID, password and the location where you want the files stored like so:
 
      USERNAME = "rog2021"
      PASSWORD = "thisisasupersecurepassword"
      COURSES = ["Human Structure and Function", "Medicine, Patients and Society I"]
      FILE_DIRS = ["~/Dropbox/M1/HSF","~/Dropbox/M1/MPS1"]
 
-5. to run the program, simply navigate to the folder where the script is stored  and type: 
+8. to run the program, simply navigate to the folder where the script is stored  and type: 
 
      ruby sync_with_angel.rb
 
-6. ta da!
+9. ta da!
 
