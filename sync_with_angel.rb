@@ -6,8 +6,8 @@
 
 USERNAME = ""
 PASSWORD = ""
-COURSES = ["Molecules, Genes & Cells", "Human Structure and Function", "Medicine, Patients and Society I", "Host Defenses", "Brain and Mind", "Medicine, Patients and Society II"]
-FILE_DIRS = ["/Users/rgejman/Dropbox/M1/MGC", "/Users/rgejman/Dropbox/M1/HSF","/Users/rgejman/Dropbox/M1/MPS1", "/Users/rgejman/Dropbox/M1/HD", "/Users/rgejman/Dropbox/M2/BAM", "/Users/rgejman/Dropbox/M2/MPS2"]
+COURSES = ["Molecules, Genes & Cells", "Human Structure and Function", "Medicine, Patients and Society I", "Host Defenses", "Brain and Mind", "Medicine, Patients and Society II", "Basis of Disease"]
+FILE_DIRS = ["/Users/rgejman/Dropbox/M1/MGC", "/Users/rgejman/Dropbox/M1/HSF","/Users/rgejman/Dropbox/M1/MPS1", "/Users/rgejman/Dropbox/M1/HD", "/Users/rgejman/Dropbox/M2/BAM", "/Users/rgejman/Dropbox/M2/MPS2","/Users/rgejman/Dropbox/M2/BOD"]
 
 ######
 ######
